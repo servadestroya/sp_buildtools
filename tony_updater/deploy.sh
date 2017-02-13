@@ -10,7 +10,7 @@ mkdir "$UPDATER_PATH"
 git clone "https://github.com/$UPDATER_USER/$UPDATER_REPO.git" "$UPDATER_PATH"
 rm -rf "$UPDATER_PATH/$PROJECT_NAME"
 mkdir "$UPDATER_PATH/$PROJECT_NAME"
-cp -r "$PACKAGE_FILES/*" "$UPDATER_PATH/$PROJECT_NAME"
+cp -r "$PACKAGE_FILES/." "$UPDATER_PATH/$PROJECT_NAME"
 cd "$UPDATER_PATH"
 git add "./$PROJECT_NAME/" -A
 git commit -m "Update '$PROJECT_NAME' to version $PROJECT_VERSION"
